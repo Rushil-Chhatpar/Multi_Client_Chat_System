@@ -75,7 +75,7 @@ void ReceiveFromClient(ClientConnection* client)
         int result = client->GetSocket()->Receive(message);
         if (result == SOCKET_ERROR)
         {
-            // clost the client
+            // close the client
             Mut.lock();
             int index = 0;
             for (int i = 0; i < Clients.size(); i++)
